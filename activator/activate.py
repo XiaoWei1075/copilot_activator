@@ -18,6 +18,7 @@ APP_PATH = app_path()
 def activate(key, version):
     _machine_id = machine_id.get_machine_id()
     is_valid, response = auth.auth_copilot(key, _machine_id, version)
+    '''
     if not is_valid:
         console.print("授权失败", style="bold red")
         console.print("错误信息：" + response)
@@ -32,6 +33,7 @@ def activate(key, version):
                 console.print("下载链接: https://wwa.lanzoub.com/b04wcnlqj")
                 console.print("提取密码: dxke")
         return
+    '''
     while True:
         console.print(Markdown("1. 激活VSCode (激活前请先升级到最新版本)"))
         console.print(Markdown("2. 激活JetBrains全家桶"))
